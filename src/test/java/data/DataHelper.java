@@ -41,8 +41,7 @@ public class DataHelper {
     }
 
     public static VerificationCode getVerificationCode(){
-        VerificationCode VerificationCode = new VerificationCode("12345");
-        return VerificationCode;
+        return new VerificationCode("12345");
     }
 
     public static InfoCard getFirstCard(){

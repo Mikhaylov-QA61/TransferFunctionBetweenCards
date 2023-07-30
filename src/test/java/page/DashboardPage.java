@@ -31,7 +31,10 @@ public class DashboardPage {
         var text = listCard.findBy(text(infoCard.getNumberCard().substring(15))).getText();
         return extractBalance(text);
     }
-
+     public int getCardBalance(int index){
+        var text = listCard.get(index).getText();
+        return extractBalance(text);
+     }
     public TransferPage selectCardTotransfer(DataHelper.InfoCard infoCard) {
         listCard.findBy(attribute("data-test-id",infoCard.getTestId())).$(".button").click();
         return new TransferPage();
